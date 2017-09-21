@@ -3,4 +3,4 @@ This is a portfolio site I did for my friend, Rhea Hall, who is a talented photo
 
 =======
 
-![website screenshot](https://github.com/tom-workman/Rheahall_Photography/img/photos/readme.png)
+![website screenshot](https://github.com/tworkman512/Rheahall_Photography/blob/master/img/photos/readme.png)
