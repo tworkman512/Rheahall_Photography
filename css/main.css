@@ -1,0 +1,353 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font: 1em/1.5 'Open Sans', sans-serif;
+	color: #373737;
+	background: #eaeaea;
+	margin: 0;
+}
+a {
+	text-decoration: none;
+	color: #4ba7ac;
+}
+h1,
+h2,
+h3 {
+	text-transform: uppercase;
+}
+h2 {
+	font-size: 1.125em;
+	color: #4a89ca;
+	font-weight: 600;
+	margin: 0;
+}
+h3 {
+	font-size: 1.3em;
+	line-height: 1.25em;
+	margin-top: 0em;
+	margin-bottom: .5em;
+}
+p {
+	font-size: .875em;
+	line-height: 1.4;
+	margin: 0 0 1.5em;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+nav {
+  text-align: center;
+  padding: 20px 0;
+  margin: 0;
+  background: #000;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0 10px;
+	padding: 0;
+}
+
+nav li {
+	display: inline-block;
+}
+
+nav a {
+	font-weight: 800;
+	padding: 15px 10px;
+	color: #fff;
+}
+
+/* nav link */
+nav a, nav a:visited {
+	color: #fff;
+	transition: .4s;
+}
+
+/* nav link on selected */
+nav a.select, nav a:hover {
+	color: #4ba7ac;
+	transition: .4s;
+}
+
+/* ---- Layout Containers ---- */
+
+.container {
+	width: 94.02985075%;
+	max-width: 1260px;
+	background: #fff;
+	margin: auto;
+}
+.info-wrapper {
+	max-width: 940px;
+	margin: 0 auto;
+	padding: 0 5%;
+}
+.main-header {
+	text-align: center;
+	padding: 2.8em 0;
+}
+.photo-container {
+	text-align: center;
+	margin-bottom: 4em;
+}
+/* ---- Page Elements ---- */
+
+.name {
+	font-size: 1.65em;
+	font-weight: 800;
+	margin: 0 0 1.5em;
+	line-height: 1;
+}
+.name span {
+	font-weight: 300;
+}
+.logo {
+	width: 45px;
+	margin-bottom: .4em;
+	cursor: pointer;
+}
+
+img.logo {
+	transition: transform .5s;
+}
+
+.logo:hover {
+	transform: rotate(-20deg);
+}
+.photo {
+	position: relative;
+	line-height: 0;
+	overflow: hidden;
+}
+.photo-container img {
+ 	max-width: 100%;
+}
+
+.photo img {
+	-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
+    transition: .5s;
+}
+
+.photo img:hover {
+	-webkit-filter: none; /* Chrome, Safari, Opera */
+	filter: none;
+	transition: .5s;
+}
+
+.button {
+	color: #fff;
+	width: 75%;
+	font-weight: 700;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	background: rgba(74,137,202, .65);
+	padding: 22px 0;
+	border-radius: .5em;
+	margin: 0;
+	position: relative;
+}
+.btn-icon {
+	opacity: 0;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	background: url('../img/download.svg');
+	position: absolute;
+	left: 45%;
+	top: 27%;
+}
+
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+/**********************************
+FOOTER
+***********************************/
+
+footer {
+  font-size: 0.75em;
+  text-align: center;
+  clear: both;
+  padding-top: 50px;
+  color: #ccc;
+}
+
+.social-icon {
+	width: 20px;
+	height: 20px;
+	margin: 0 5px;
+}
+
+.client-btn {
+	padding: 4px 8px;
+	background-color: #4ba7ac;
+	color: #fff;
+	font-weight: bold;
+}
+
+footer p.for-clients {
+	margin-top: 10px;
+}
+
+p.for-clients .client-btn:hover {
+	text-decoration: underline;
+}
+
+/**********************************
+PAGE: ABOUT ME
+***********************************/
+
+.profile-photo {
+	display: block;
+	max-width: 200px; /* also consider 150px */
+	margin: 0 auto 30px;
+	border-radius: 100%;
+}
+
+.from-rhea {
+	font-weight: 500;
+}
+
+.truncate {
+	width: 50%;
+	line-height: 1.6;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+blockquote {
+	color: #255254;
+	font-weight: 500;
+}
+
+blockquote b {
+	color: #373737;
+}
+
+/**********************************
+PAGE: CONTACT
+***********************************/
+
+.contact-info {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 0.9em;
+}
+
+.contact-info a {
+	display: block;
+	min-height: 30px;
+	background-repeat: no-repeat;
+	background-size: 30px 30px;
+	padding: 5px 0 0 40px;
+	margin: 0 0 10px;
+}
+
+.contact-info li.phone a {
+	background-image: url('../img/phone.png');
+}
+
+.contact-info li.mail a {
+	background-image: url('../img/mail.png');
+}
+
+.contact-info li.twitter a {
+	background-image: url('../img/twitter.png');
+}
+
+/* ================================= 
+  Photo Overlay Transition
+==================================== */
+
+.photo-overlay {
+	opacity: 0;
+	transition: .5s;
+}
+.photo-overlay:hover {
+	opacity: 1;
+}
+
+/* ================================= 
+  Button Transitions
+==================================== */
+
+.button {
+	opacity: 0;
+	transition: opacity .3s .2s, background .4s .3s, box-shadow .5s 0s;
+	transition-timing-function: ease-out;
+}
+
+.button:hover {
+	background: rgba(74, 137, 202, 1);
+	box-shadow: 0 0 0 3px rgba(255, 255, 255, .7);
+}
+
+.photo-overlay:hover .button {
+	opacity: 1;
+}
+
+.btn-icon {
+	transition-property: opacity, left;
+	transition-duration: .5s;
+	transition-delay: .3s;
+	transition-timing-function: ease-in-out, ease-out;
+}
+
+.button:hover .btn-icon {
+	opacity: 1;
+	left: 80%;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 0) and (max-width: 768px) {
+	.container {
+		padding: 0 1.225em 2.5em;
+	}
+}
+@media (min-width: 769px) {
+	.container {
+		padding: 0 2.25em 2em;
+	}
+	.photo-container {
+		width: 48%;
+		float: left;
+		margin-left: 4%;
+	}
+}
+@media (min-width: 769px) and (max-width: 1024px) { 
+	.photo-container:nth-child(2n+1) {
+		margin-left: 0;
+		clear: left;
+	}
+}
+@media (min-width: 1025px) { 
+	.photo-container {
+		width: 30.63973064%;
+	}
+	.photo-container:nth-child(3n+1) {
+		margin-left: 0;
+		clear: left;
+	}
+}
